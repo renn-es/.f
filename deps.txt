@@ -1,0 +1,7 @@
+git
+ranger
+neovim
+tmux
+exa
+trash-cli
+bat
