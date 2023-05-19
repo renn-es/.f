@@ -1,4 +1,4 @@
-# .fmin
+# .f
 
 Minimal dotfiles for all of our [Renn.es](https://renn.es) servers.
 
