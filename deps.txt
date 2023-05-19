@@ -5,3 +5,6 @@ tmux
 exa
 trash-cli
 bat
+gcc
+cmake
+g++
