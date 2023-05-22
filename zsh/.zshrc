@@ -198,7 +198,8 @@ function _git_symbols() {
 	# For the rest of the symbols, we use the v1 format of git status because it's easier to parse.
 	local git_status
 
-	symbols="$(git status --porcelain=v1 | cut -c1-2 | sort | uniq | sed 's/ //g')"
+	symbols="$(git status --porcelain=v1 | cut -c1-2 | sed 's/ //g')"
+
 
 	while IFS= read -r symbol; do
 		case $symbol in
@@ -208,6 +209,8 @@ function _git_symbols() {
 			D) output_symbols+="$deleted";;
 		esac
 	done <<< "$symbols"
+
+	output_symbols="$(echo -n "$output_symbols" | tr -s "$untracked$modified$moved$deleted")"
 
 	[[ -n $output_symbols ]] && echo -n " $output_symbols"
 }
