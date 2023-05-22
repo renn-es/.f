@@ -129,7 +129,7 @@ alias grs="git restore --staged"
 alias d="docker"
 alias dp="docker ps"
 alias dc="docker compose"
-alias dcu"dc up -d"
+alias dcu="dc up -d"
 alias dcd="dc down"
 
 # Let me use the keys on my keyboard.
