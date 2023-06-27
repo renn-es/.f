@@ -1,3 +1,6 @@
+# PRELAUNCH: show Renn.es MOTD
+motd
+
 # ========================= #
 #  Variables and functions  #
 # ========================= #
