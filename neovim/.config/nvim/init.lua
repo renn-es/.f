@@ -264,3 +264,5 @@ vim.opt.linebreak = true
 -- Bind S to replace every occurence (normal mode)
 vim.cmd [[map S :%s//g<Left><Left>]]
 
+-- When editing a commit message, set the textwidth to 79, spellcheck, wrap and colorcolumn
+vim.cmd [[ au FileType gitcommit setlocal textwidth=79 spell wrap colorcolumn=80 ]]
