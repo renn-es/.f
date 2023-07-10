@@ -132,7 +132,7 @@ alias gr="git restore"
 alias grs="git restore --staged"
 
 alias d="docker"
-alias dp="docker ps"
+alias dp="docker ps -a --format 'table {{.Names}}\t{{.Status}}'"
 alias dc="docker compose"
 alias dcu="dc up -d"
 alias dcd="dc down"
