@@ -12,6 +12,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export EDITOR="/usr/bin/nvim"
 export PAGER="/usr/bin/bat"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 __pathadd() {
     export PATH="$1:$PATH"
