@@ -20,6 +20,8 @@ __pathadd() {
 
 __pathadd $HOME/.local/bin
 __pathadd $HOME/.cargo/bin
+__pathadd /sbin
+__pathadd /usr/sbin
 
 # Switch to emacs mode instead of vi mode
 bindkey -e
