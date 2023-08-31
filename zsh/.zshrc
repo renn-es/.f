@@ -147,10 +147,10 @@ bindkey  "^[[3~"  delete-char
 # =================== #
 
 # Start weechat session in the background if it hasn't started yet
-if [[ $(ps -ef | grep -c tmux) -eq 1 ]] || ([[ $(ps -ef | grep -c tmux) -ne 1 ]] && ! tmux has-session -t weechat) ; then
-    echo "Starting weechat tmux session"
-    tmux new-session -d -s weechat weechat
-fi
+# if [[ $(ps -ef | grep -c tmux) -eq 1 ]] || ([[ $(ps -ef | grep -c tmux) -ne 1 ]] && ! tmux has-session -t weechat) ; then
+#     echo "Starting weechat tmux session"
+#     tmux new-session -d -s weechat weechat
+# fi
 
 # =================== #
 #       Prompt        #
