@@ -22,6 +22,7 @@ __pathadd $HOME/.local/bin
 __pathadd $HOME/.cargo/bin
 __pathadd /sbin
 __pathadd /usr/sbin
+__pathadd /usr/lib/cargo/bin
 
 # Switch to emacs mode instead of vi mode
 bindkey -e
