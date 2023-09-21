@@ -11,8 +11,8 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export EDITOR="/usr/bin/nvim"
-export PAGER="/usr/bin/bat"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PAGER="/usr/bin/batcat"
+export MANPAGER="batcat -l man -p"
 
 __pathadd() {
     export PATH="$1:$PATH"
@@ -113,9 +113,10 @@ alias la="ls -a"
 alias lla="ll -a"
 
 alias t="trash"
-alias b="bat"
+alias b="batcat"
 
 alias grep="grep --color=auto"
+alias man="batman"
 
 alias g="git"
 alias ga="git add"
@@ -138,6 +139,10 @@ alias dp="docker ps -a --format 'table {{.Names}}\t{{.Status}}'"
 alias dc="docker compose"
 alias dcu="dc up -d"
 alias dcd="dc down"
+
+# bat's binary is called 'batcat' on Debian for some reason
+alias bat='batcat'
+
 
 # Let me use the keys on my keyboard.
 bindkey  "^[[H"   beginning-of-line
