@@ -10,9 +10,9 @@ export XDG_DATA_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export PAGER="batcat -p"
-export BAT_PAGER="less -RF --jump-target=.5"
 export EDITOR="/usr/bin/nvim"
+export PAGER="/usr/bin/batcat"
+export MANPAGER="batcat -l man -p"
 
 __pathadd() {
     export PATH="$1:$PATH"
@@ -93,13 +93,6 @@ add-zsh-hook precmd "__reset-cursor"
 __reload-tmux-bar() {tmux refresh-client -S > /dev/null 2>&1}
 add-zsh-hook precmd "__reload-tmux-bar"
 
-# Run man with bat as a pager
-__myman() {
-    man $@ | batcat -l man -p
-}
-compdef _man __myman # man completion works for __myman too
-alias man="__myman"
-
 
 # =================== #
 #       Aliases       #
@@ -124,6 +117,7 @@ alias t="trash"
 alias b="batcat"
 
 alias grep="grep --color=auto"
+alias man="batman"
 
 alias g="git"
 alias ga="git add"
