@@ -11,8 +11,9 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export EDITOR="/usr/bin/nvim"
-export PAGER="/usr/bin/batcat"
-export MANPAGER="batcat -l man -p"
+export PAGER="batcat -p"
+export BAT_PAGER="less -RF --jump-target=.5"
+export MANPAGER="$BAT_PAGER"
 
 __pathadd() {
     export PATH="$1:$PATH"
@@ -117,7 +118,6 @@ alias t="trash"
 alias b="batcat"
 
 alias grep="grep --color=auto"
-alias man="batman"
 
 alias g="git"
 alias ga="git add"
