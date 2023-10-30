@@ -140,6 +140,7 @@ alias dp="docker ps -a --format 'table {{.Names}}\t{{.Status}}'"
 alias dc="docker compose"
 alias dcu="dc up -d"
 alias dcd="dc down"
+alias dcp="dc pull"
 
 # bat's binary is called 'batcat' on Debian for some reason
 alias bat='batcat'
